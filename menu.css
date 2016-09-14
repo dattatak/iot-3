@@ -1,0 +1,60 @@
+/* misc */
+.clearer122 {clear: both;}
+.stripes122 {
+	background: #333 url(../img/stripe.gif);
+	height: 6px;
+}
+.left122 {float: left;}
+.right122 {float: right;}
+
+.menurighttext122 {
+        float: right;
+        color: #FFF;
+        font-size: 10.5pt;
+	font-weight: normal;
+	font: sans-serif;
+}
+
+.menu122{
+	background: #111 url(../img/bg.jpg) repeat-y center top;
+	color: #BBB;
+	font-size: 7.5pt;
+/*	font: normal "Lucida Sans Unicode",sans-serif;
+*/	font: normal "Lucida Sans Unicode",sans-serif;
+}
+/* header */
+.header122 {
+	background: #111;
+	border-bottom: 1px solid #333;
+	font: normal 2em sans-serif;
+	height: 80px;
+}
+.header122 a {
+	color: #888;
+	display: block;
+	line-height: 80px;
+	text-decoration: none;
+	width: 100%;
+}
+/*.header span {padding-left: 32px;}*/
+.header122 span {margin:0; font-size:2em; text-align:center;}
+.header122 a:hover {
+	background: #191919;
+	color: #BBB;
+}
+
+/* navigation */
+.nav122 {background: #191919 url(../img/nav.gif);}
+.nav122 a {
+	background: #191919 url(../img/nav.gif);
+	border-right: 1px solid #161616;
+	color: #CCC;
+	float: left;
+	font: bold 1em Verdana,sans-serif;
+	font-size: 7.5pt;
+	line-height: 21px;
+	padding: 0 20px;
+}
+.nav122 a:hover {
+	background: #191919 url(../img/nav_hover.gif);
+}
