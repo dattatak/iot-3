@@ -85,7 +85,7 @@ function onOutTClick()
 <text x="70" y="10" style="font-size:8px">o</text>
 <text x="75" y="25" style="font-size:24px">C</text>
 <a xlink:href="https://thingspeak.com/channels/105509">
-  <text x="10" y="25" id="groundT" style="font-size:24px">27.8</text>
+  <text x="10" y="25" id="groundT" style="font-size:24px"></text>
 </a>
 </g>
 
@@ -94,21 +94,21 @@ function onOutTClick()
 <rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
 <text x="70" y="10" style="font-size:8px">o</text>
 <text x="75" y="25" style="font-size:24px">C</text>
-<text x="10" y="25" id="outT" style="font-size:24px">27.8</text>
+<text x="10" y="25" id="outT" style="font-size:24px"></text>
 </g>
 
 <g transform="translate(550,210)">
 <rect width="100" height="35" x="0" y="0" style="fill:#b2b2b2;stroke:#000000" />
 <rect width="90" height="30" x="5" y="2" style="fill:#00ffff;stroke:#000000" />
 <text x="70" y="25" style="font-size:24px">%</text>
-<text x="10" y="25" id="outH" style="font-size:24px">54.8</text>
+<text x="10" y="25" id="outH" style="font-size:24px"></text>
 </g>
 
 <g transform="translate(550,250)">
 <rect width="100" height="35" x="0" y="0" style="fill:#b2b2b2;stroke:#000000" />
 <rect width="90" height="30" x="5" y="2" style="fill:#fff6d5;stroke:#000000" />
 <text x="64" y="25" style="font-size:16px">kPa</text>
-<text x="8" y="25" id="outP" style="font-size:16px">1000.8</text>
+<text x="8" y="25" id="outP" style="font-size:16px"></text>
 </g>
 
 <g transform="translate(390,440)">
@@ -116,14 +116,14 @@ function onOutTClick()
 <rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
 <text x="70" y="10" style="font-size:8px">o</text>
 <text x="75" y="25" style="font-size:24px">C</text>
-<text x="10" y="25" id="livT" style="font-size:24px">27.8</text>
+<text x="10" y="25" id="livT" style="font-size:24px"></text>
 </g>
 
 <g transform="translate(390,480)">
 <rect width="100" height="35" x="0" y="0" style="fill:#b2b2b2;stroke:#000000" />
 <rect width="90" height="30" x="5" y="2" style="fill:#00ffff;stroke:#000000" />
 <text x="70" y="25" style="font-size:24px">%</text>
-<text x="10" y="25" id="livH" style="font-size:24px">54.8</text>
+<text x="10" y="25" id="livH" style="font-size:24px"></text>
 </g>
 
 <g transform="translate(180,100)">
@@ -131,14 +131,14 @@ function onOutTClick()
 <rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
 <text x="70" y="10" style="font-size:8px">o</text>
 <text x="75" y="25" style="font-size:24px">C</text>
-<text x="10" y="25" id="attT" style="font-size:24px">27.8</text>
+<text x="10" y="25" id="attT" style="font-size:24px"></text>
 </g>
 
 <g transform="translate(320,100)">
 <rect width="100" height="35" x="0" y="0" style="fill:#b2b2b2;stroke:#000000" />
 <rect width="90" height="30" x="5" y="2" style="fill:#00ffff;stroke:#000000" />
 <text x="70" y="25" style="font-size:24px">%</text>
-<text x="10" y="25" id="attH" style="font-size:24px">54.8</text>
+<text x="10" y="25" id="attH" style="font-size:24px"></text>
 </g>
 
 <g transform="translate(240,250)">
@@ -146,7 +146,7 @@ function onOutTClick()
 <rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
 <text x="74" y="10" style="font-size:8px">o</text>
 <text x="75" y="25" style="font-size:22px">C</text>
-<text x="10" y="25" id="secT" style="font-size:22px">27.8</text>
+<text x="10" y="25" id="secT" style="font-size:22px"></text>
 </g>
 
 <g transform="translate(120,460)">
@@ -154,7 +154,7 @@ function onOutTClick()
 <rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
 <text x="70" y="10" style="font-size:8px">o</text>
 <text x="75" y="25" style="font-size:24px">C</text>
-<text x="10" y="25" id="fishT" style="font-size:24px">27.8</text>
+<text x="10" y="25" id="fishT" style="font-size:24px"></text>
 </g>
 
 <rect width="160" height="100" x="90" y="410" style="fill:#00ffff;fill-opacity:0.4;stroke:#000000" />
