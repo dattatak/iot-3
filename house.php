@@ -29,7 +29,8 @@ function parseFeed(el_id, channel_id, field_number) {
     var elem = document.getElementById(el_id)
 
     var a_el = document.createElementNS(svgns, "a");
-    a_el.setAttributeNS(linkns, 'title', 'Updated: ' + data.feeds[0]['created_at']);
+	var t_up = new Date(Date.parse(data.feeds[0]['created_at']));
+    a_el.setAttributeNS(linkns, 'title', 'Updated: ' + t_up.toString());
     a_el.setAttributeNS(linkns, 'href', 'https://thingspeak.com/channels/' + channel_id + '/charts/' + field_number + '?results=20&width=300&height=200');
     a_el.setAttribute('target', "iframe_a");
 
@@ -175,7 +176,7 @@ function updateData()
 
 <div style="float: left; margin-top:60px;">
   <div id='time'></div>
-  <iframe src="" name="iframe_a" height="200" width="300">Click on sensor reading to get<br />last 20 results</iframe>
+  <iframe src="" name="iframe_a" height="200" width="300"><font color="yellow">Click on sensor reading to get<br />last 20 results</font></iframe>
 </div>
 
 <script>
