@@ -161,13 +161,6 @@ function updateData()
 <text x="75" y="25" style="font-size:22px">C</text>
 </g>
 
-<g id="fishT" transform="translate(120,460)">
-<rect width="100" height="35" x="0" y="0" style="fill:#b2b2b2;stroke:#000000" />
-<rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
-<text x="70" y="10" style="font-size:8px">o</text>
-<text x="75" y="25" style="font-size:22px">C</text>
-</g>
-
 <!-- tank -->
 <rect width="160" height="100" x="90" y="410" style="fill:#00ffff;fill-opacity:0.4;stroke:#000000" />
 
@@ -176,6 +169,13 @@ function updateData()
 <use xlink:href="#fish" x="700" y="2050" transform="scale(0.2)" />
 <use xlink:href="#fish" x="800" y="2150" transform="scale(0.2) rotate(25 800 2150)" />
 <use xlink:href="#fish" x="900" y="2100" transform="scale(0.2)" />
+
+<g id="fishT" transform="translate(120,460)">
+<rect width="100" height="35" x="0" y="0" style="fill:#b2b2b2;stroke:#000000" />
+<rect width="90" height="30" x="5" y="2" style="fill:#ccff66;stroke:#000000" />
+<text x="70" y="10" style="font-size:8px">o</text>
+<text x="75" y="25" style="font-size:22px">C</text>
+</g>
 
 </svg>
 </div>
