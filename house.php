@@ -29,8 +29,14 @@ function parseFeed(el_id, channel_id, field_number) {
     var elem = document.getElementById(el_id)
 
     var a_el = document.createElementNS(svgns, "a");
+    var date = new Date();
 	var t_up = new Date(Date.parse(data.feeds[0]['created_at']));
-    a_el.setAttributeNS(linkns, 'title', 'Updated: ' + t_up.toString());
+	var t_diff  = Math.round((date - t_up) / (1000 * 60));
+	var s_diff = '< 1';
+	if (t_diff > 0)
+		s_diff = t_diff.toString();
+		
+    a_el.setAttributeNS(linkns, 'title', 'Updated: ' + s_diff + ' min ago');
     a_el.setAttributeNS(linkns, 'href', 'https://thingspeak.com/channels/' + channel_id + '/charts/' + field_number + '?results=20&width=300&height=200');
     a_el.setAttribute('target', "iframe_a");
 
