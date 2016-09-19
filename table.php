@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/table.css" />
         <link rel="stylesheet" type="text/css" href="def.css" media="screen"/>
     </head>
-<body onload="updateData()">
+<body class="bodytable" onload="updateData()">
 
 <br />
 <?php

@@ -11,7 +11,7 @@
 <script src="https://code.highcharts.com/modules/exporting.js"></script>    
 
 <style type="text/css">
-  body { background-color: white; height: 100%; margin: 0; padding: 0; }
+  body { background-color: white; height: 100%;}
   #chart-container 
   { 
 	  width: 100%;
@@ -186,11 +186,7 @@
     // offset in minutes is converted to milliseconds and subtracted so that chart's x-axis is correct
     return Date.parse(d) - (my_offset * 60000);
   }
-
 </script>
-
-
-
 </head>
 <body class="bodypage">
  
