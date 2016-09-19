@@ -1,120 +1,102 @@
-<?php
-    $json_file1 = file_get_contents('https://api.thingspeak.com/channels/36148/feeds.json?results=2&timezone=America%2FNew_York');
-    $jfo1 = json_decode($json_file1);
-
-    $channel1 = $jfo1->channel;
-    $title1 = $channel1->name;
-    $feeds1 = $jfo1->feeds;
-
-    $json_file2 = file_get_contents('https://api.thingspeak.com/channels/105509/feeds.json?results=2&timezone=America%2FNew_York');
-    $jfo2 = json_decode($json_file2);
-
-    $channel2 = $jfo2->channel;
-    $title2 = $channel2->name;
-    $feeds2 = $jfo2->feeds;
-
-    $json_file3 = file_get_contents('https://api.thingspeak.com/channels/101673/feeds.json?results=2&timezone=America%2FNew_York');
-    $jfo3 = json_decode($json_file3);
-
-    $channel3 = $jfo3->channel;
-    $title3 = $channel3->name;
-    $feeds3 = $jfo3->feeds;
-
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Environmental Wellness In Numbers</title>
-        <link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/table.css" />
+        <link rel="stylesheet" type="text/css" href="def.css" media="screen"/>
     </head>
-    <body>
+<body onload="updateData()">
 
-<div class="container">
-<h1 class="main_title"><?php echo $title2; ?></h1>
-<div class="content">
-<ul class="ul_json clearfix">
+<br />
 <?php
-    foreach ($feeds2 as $feed) {
+include("menu.php");
 ?>
-    <li>
-    <h2><?php echo $feed->field1; ?> C</h2>
-    <h3><?php echo $feed->field2; ?> mmHg</h3>
-    <h3><?php echo $feed->field3; ?> %</h3>
-    <h3><?php echo $feed->field4; ?> mV</h3>
+<br />
 
-    <h3>
-<?php
-    $d=strtotime($feed->created_at);
-    $diff=ceil((time()-$d)/60);
-    echo date("Y-m-d h:i:sa", $d) . " (" . $diff . " min ago)";
-?>
-        </h3>
-    </li>
-<?php
-    } // end foreach
-?>
-</ul>
-</div>
-</div>
+<script>
 
-<div class="container">
-<h1 class="main_title"><?php echo $title1; ?></h1>
-<div class="content">
-<ul class="ul_json clearfix">
-<?php
-    foreach ($feeds1 as $feed) {
-?>
-    <li>
-    <h2><?php echo $feed->field1; ?> C</h2>
-    <h3><?php echo $feed->field3; ?> mV</h3>
+// read specified feed
+/*
+    el_id - svg element to update
+    channel_id - thingspeak channel id
+    field_number - field to read
+*/
+function parseFeed(title, channel_id) {
+  $.getJSON('https://api.thingspeak.com/channels/' + channel_id + '/feeds.json?offset=0&round=2&results=2', function(data) {
+    var elem = document.getElementById('results');
 
-    <h3>
-<?php
-    $d=strtotime($feed->created_at);
-    $diff=ceil((time()-$d)/60);
-    echo date("Y-m-d h:i:sa", $d) . " (" . $diff . " min ago)";
-?>
-        </h3>
-    </li>
-<?php
-    } // end foreach
-?>
-</ul>
-</div>
-</div>
+	var ul = document.createElement("ul");
+	ul.setAttribute("class", "ul_json clearfix" );
 
-<div class="container">
-<h1 class="main_title"><?php echo $title3; ?></h1>
-<div class="content">
-<ul class="ul_json clearfix">
-<?php
-    foreach ($feeds3 as $feed) {
-?>
-    <li>
-    <h2><?php echo $feed->field1; ?> C</h2>
-    <h2><?php echo $feed->field2; ?> %</h2>
-    <h3><?php echo $feed->field3; ?> C</h3>
+// Create row in the table
+	for (var i = 0; i < data.feeds.length; ++i) 
+	{
+		var add = false;
+		var li = document.createElement("li");
+		for(var key in data.feeds[i])
+		{
+			if (key.startsWith('field') && !isNaN(parseFloat(data.feeds[i][key])))
+			{
+				var h2 = document.createElement("h2");
+				h2.appendChild( document.createTextNode(data.channel[key] + ': ' + parseFloat(data.feeds[i][key]))) ;
+				li.appendChild(h2);
+				add = true;
+			}
+		}
+		if (add)
+		{
 
-    <h3>
-<?php
-    $d=strtotime($feed->created_at);
-    $diff=ceil((time()-$d)/60);
-    echo date("Y-m-d h:i:sa", $d) . " (" . $diff . " min ago)";
-?>
-        </h3>
-    </li>
-<?php
-    } // end foreach
-?>
-</ul>
-</div>
-</div>
+			var date = new Date();
+			var t_up = new Date(Date.parse(data.feeds[i]['created_at']));
+			var t_diff  = Math.round((date - t_up) / (1000 * 60));
+			var s_diff = '< 1';
+			if (t_diff > 0)
+				s_diff = t_diff.toString();
+			var h2 = document.createElement("h2");
+			h2.appendChild( document.createTextNode('Updated: ' + s_diff + ' min ago (' + t_up.toLocaleString() + ')')) ;
+			li.appendChild(h2);
+			
+			ul.appendChild( li );
+		}
+	}
 
-    <div class="footer">
-    Powered by<a href="http://www.newartstudio.net"> New Art Tech Studio </a>
-    </div>
+	var content = document.createElement("div");
+	content.setAttribute("class", "content" );
+	content.appendChild(ul);
 
-    </body>
+	var h1 = document.createElement("h1");
+	h1.setAttribute("class", "main_title" );
+	h1.appendChild( document.createTextNode(title) );
+
+	var container = document.createElement("div");
+	container.setAttribute("class", "container" );
+	var br = document.createElement("br");
+	
+	container.appendChild(h1);
+	container.appendChild(content);
+
+	elem.appendChild(container);
+	elem.appendChild(br);
+
+  });
+}
+
+function updateData()
+{
+    parseFeed('Balcony Outside', '142235');
+    parseFeed('Living Room', '101673');
+    parseFeed('Attic', '142240');
+    parseFeed('Kids Bedroom', '36148');
+    parseFeed('Ground Level', '105509');
+}
+
+</script>
+
+<div id='results'></div>
+
+<?php include("footer.php"); ?>
+
+</body>
 </html>
