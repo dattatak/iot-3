@@ -1,4 +1,6 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link rel="stylesheet" type="text/css" href="css/def.css" media="screen"/>
@@ -18,7 +20,6 @@
 </head>
 
 <body class="bodyind">
-
 <?php
 include("menu.php");
 ?>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Environmental Wellness In Numbers</title>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/table.css" />
-        <link rel="stylesheet" type="text/css" href="css/def.css" media="screen"/>
-    </head>
-<body class="bodytable" onload="updateData()">
+<html style="height: 100%;">
+	
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Environmental Wellness In Numbers</title>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/table.css" />
+  <link rel="stylesheet" type="text/css" href="css/def.css" media="screen"/>
+</head>
 
-<br />
+<body class="bodytable" onload="updateData()">
 <?php
 include("menu.php");
 ?>

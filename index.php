@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html style="height: 100%;">
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -7,7 +8,6 @@
 </head>
 
 <body class="bodypage">
-
 <?php
 include("menu.php");
 ?>
