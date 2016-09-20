@@ -24,10 +24,15 @@ var linkns = 'http://www.w3.org/1999/xlink';
 */
 function parseFeed(el_id, channel_id, field_number) {
   var field_name = 'field' + field_number;
+  var a_id = el_id+'_a';
 
   $.getJSON('https://api.thingspeak.com/channels/' + channel_id + '/fields/' + field_number + '.json?offset=0&round=2&results=1', function(data) {
     var elem = document.getElementById(el_id)
+    var a_elem = document.getElementById(a_id)
 
+	if (a_elem)
+		a_elem.parentNode.removeChild(a_elem);
+	
     var a_el = document.createElementNS(svgns, "a");
     var date = new Date();
 	var t_up = new Date(Date.parse(data.feeds[0]['created_at']));
@@ -39,6 +44,7 @@ function parseFeed(el_id, channel_id, field_number) {
     a_el.setAttributeNS(linkns, 'title', 'Updated: ' + s_diff + ' min ago');
     a_el.setAttributeNS(linkns, 'href', 'https://thingspeak.com/channels/' + channel_id + '/charts/' + field_number + '?results=20&width=300&height=200');
     a_el.setAttribute('target', "iframe_a");
+    a_el.setAttribute('id', a_id);
 
     var t_el = document.createElementNS(svgns, 'text'); 
 	var content = parseFloat(data.feeds[0][field_name]);
@@ -53,6 +59,8 @@ function parseFeed(el_id, channel_id, field_number) {
     a_el.appendChild(t_el); 
     elem.appendChild(a_el); 
   });
+  
+  setTimeout(function() { parseFeed(el_id, channel_id, field_number); }, 20000);
 }
 
 function updateData()
