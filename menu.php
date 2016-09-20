@@ -1,4 +1,4 @@
-<img src="logo_small.png">
+<img src="img/logo_small.png">
  
 <div class="stripes"><span></span></div>
  

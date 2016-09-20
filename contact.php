@@ -6,7 +6,7 @@
 
 <style type="text/css">
 .bodyind {
-	background: #000 url(moon.jpg) no-repeat 0px 70px;
+	background: #000 url(img/moon.jpg) no-repeat 0px 70px;
 	padding-left: 2em;
 	color: #BBB;
 	font: normal 82.5% "Lucida Sans Unicode",sans-serif;

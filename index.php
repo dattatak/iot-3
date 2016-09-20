@@ -12,7 +12,7 @@
 include("menu.php");
 ?>
 
-<img src="smarthome.jpg" height="200" alt="Smart Home Image - Network of Wireless Sensors" align="left" class="painting" />
+<img src="img/smarthome.jpg" height="200" alt="Smart Home Image - Network of Wireless Sensors" align="left" class="painting" />
 <br />
 
 <p>Our research approach is to design and develop reliable, efficient, flexible,
