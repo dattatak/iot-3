@@ -2,29 +2,10 @@
 	margin: 0;
 	padding: 0;
 }
-
 a {text-decoration: none;}
-.stripes122 {
-        background: #333 url(../img/stripe.gif);
-	height: 2px;
-}
-		
-.bodyind {
-	background: #000 url(moon.jpg) no-repeat 0px 70px;
-	padding-left: 2em;
-	color: #BBB;
-	font: normal 82.5% "Lucida Sans Unicode",sans-serif;
-	width: 80%;
-}
-
-.bodytext {
-	padding-left: 20em;
-}
-
 p{
     margin-bottom: 10px;
 }
-
 .bodypage {
 	background: #000 no-repeat left top;
 	padding-left: 2em;
@@ -32,10 +13,21 @@ p{
 	font: normal 82.5% "Lucida Sans Unicode",sans-serif;
 	width: 80%;
 }
+ul {margin-left: 2em;}
+h1 {font: bold 1.7em sans-serif;color: #FFF;}
+h2 {
+	font: bold 1.0em Verdana,sans-serif;
+	padding-bottom: 4px;
+}
+.painting {
+	
+	padding: 18px 20px;
+	border: none;
+}
 
 /* navigation */
-.nav122 {background: #333;}
-.nav122 a {
+.nav {background: #333;}
+.nav a {
 	background: #333;
 	border-right: 1px solid #161616;
 	color: #CCC;
@@ -44,32 +36,18 @@ p{
 	line-height: 21px;
 	padding: 0 20px;
 }
-.nav122 a:hover {
-	background: #ffffff;
+.nav a:hover {background: #ffffff;}
+.clearer {clear: both;}
+.stripes {
+    background: #333 url(../img/stripe.gif);
+	height: 2px;
 }
-
-.clearer122 {clear: both;}
-
-ul {margin-left: 2em;}
-h1 {font: bold 1.7em sans-serif;color: #FFF;}
-h2 {
-	font: bold 1.0em Verdana,sans-serif;
-	padding-bottom: 4px;
-}
-
-.painting {
-	
-	padding: 18px 20px;
-	border: none;
-}
-
 #footer{
     clear: both;
     text-align: center;
     padding: 10px 0;
     background-color: #333;
 }
-
 #footer a {
 	color: #FFF;
 	font: 1em Verdana,sans-serif;

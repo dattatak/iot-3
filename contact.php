@@ -3,9 +3,19 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link rel="stylesheet" type="text/css" href="def.css" media="screen"/>
 <title>New Art Tech</title>
+
+<style type="text/css">
+.bodyind {
+	background: #000 url(moon.jpg) no-repeat 0px 70px;
+	padding-left: 2em;
+	color: #BBB;
+	font: normal 82.5% "Lucida Sans Unicode",sans-serif;
+	width: 80%;
+}
+.bodytext {padding-left: 20em;}
+</style>
+
 </head>
-
-
 
 <body class="bodyind">
 
