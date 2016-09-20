@@ -5,7 +5,7 @@
         <title>Environmental Wellness In Numbers</title>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <link rel="stylesheet" href="css/table.css" />
-        <link rel="stylesheet" type="text/css" href="def.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="css/def.css" media="screen"/>
     </head>
 <body class="bodytable" onload="updateData()">
 

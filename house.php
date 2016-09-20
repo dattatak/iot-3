@@ -3,7 +3,7 @@
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="def.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/def.css" media="screen"/>
 </head>
 
 <body class="bodypage" onload="updateData()">

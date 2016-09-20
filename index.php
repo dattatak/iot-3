@@ -2,7 +2,7 @@
 
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<link rel="stylesheet" type="text/css" href="def.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/def.css" media="screen"/>
 <title>New Art Tech</title>
 </head>
 
