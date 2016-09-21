@@ -49,7 +49,7 @@
   var series_4_channel_id = 105509;
   var series_4_field_number = 1;
   var series_4_read_api_key = '';
-  var series_4_results = 85;
+  var series_4_results = 160;
   var series_4_color = '#000000';
 
   // variables for the fifth series
@@ -81,17 +81,17 @@
     // add a blank chart
     addChart();
     // add the 2-nd level temp series
-//    addSeries(series_1_channel_id, series_1_field_number, series_1_read_api_key, series_1_results, series_1_color);
+    addSeries(series_1_channel_id, series_1_field_number, series_1_read_api_key, series_1_results, series_1_color, false);
     // add the outside temp series
-    addSeries(series_2_channel_id, series_2_field_number, series_2_read_api_key, series_2_results, series_2_color);
+    addSeries(series_2_channel_id, series_2_field_number, series_2_read_api_key, series_2_results, series_2_color, true);
     // add the attic temp series
-    addSeries(series_3_channel_id, series_3_field_number, series_3_read_api_key, series_3_results, series_3_color);
+    addSeries(series_3_channel_id, series_3_field_number, series_3_read_api_key, series_3_results, series_3_color, true);
     // add the ground temp/pressure series
-//    addSeries(series_4_channel_id, series_4_field_number, series_4_read_api_key, series_4_results, series_4_color);
+    addSeries(series_4_channel_id, series_4_field_number, series_4_read_api_key, series_4_results, series_4_color, false);
     // add the living room temp series
-    addSeries(series_5_channel_id, series_5_field_number, series_5_read_api_key, series_5_results, series_5_color);
+    addSeries(series_5_channel_id, series_5_field_number, series_5_read_api_key, series_5_results, series_5_color, true);
     // add the aquarium temp series
-//    addSeries(series_6_channel_id, series_6_field_number, series_6_read_api_key, series_6_results, series_6_color);
+    addSeries(series_6_channel_id, series_6_field_number, series_6_read_api_key, series_6_results, series_6_color, false);
 
   });
 
@@ -154,7 +154,7 @@
   }
 
   // add a series to the chart
-  function addSeries(channel_id, field_number, api_key, results, color) {
+  function addSeries(channel_id, field_number, api_key, results, color, b_show) {
     var field_name = 'field' + field_number;
 
     // get the data with a webservice call
@@ -177,7 +177,7 @@
       });
 
       // add the chart data
-      my_chart.addSeries({ data: chart_data, name: data.channel[field_name], color: color });
+      my_chart.addSeries({ data: chart_data, name: data.channel[field_name], color: color, visible: b_show });
     });
   }
 
